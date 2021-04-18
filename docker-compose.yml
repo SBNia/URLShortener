@@ -1,0 +1,26 @@
+version: '3'
+
+networks:
+  URLShortener:
+    external: false
+    
+services: 
+  # api
+  urlShortenerBackend: 
+    container_name: URLShortener
+    build: .
+    links: 
+      - redis
+    ports: 
+      - "5000:5000"
+    volumes:
+      - .:/home/app
+    networks:
+      - URLShortener  
+
+  # redis db
+  redis: 
+    image: redis
+    ports: 
+      - "6379:6379"
+      
