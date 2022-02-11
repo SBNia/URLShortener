@@ -19,7 +19,7 @@ sh dev.sh
 
 Example of Req and res can be found in Postman directory.
  
-POST http://192.168.13.40:5000/shortenUrl
+POST http://My_IP:5000/shortenUrl
 
 Request:
 Content-Type: application/json
@@ -47,7 +47,7 @@ Response:
 }
 
 
-POST http://192.168.13.40:5000/KEbLe
+POST http://My_IP:5000/KEbLe
 
 
 To run: 
